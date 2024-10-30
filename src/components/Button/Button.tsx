@@ -1,7 +1,16 @@
 import React from "react";
 
-const Button = (props: any) => {
-    return <div>Button</div>;
+interface ButtonProps {
+    onClick: () => void,
+    text: string
+}
+
+const Button = (props: ButtonProps) => {
+    return (
+        <button onClick={props.onClick}>
+            {props.text}
+        </button>
+    )
 };
 
 export default Button;

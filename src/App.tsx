@@ -1,29 +1,21 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from "react";
 import "./App.scss";
+import Button from "./components/Button/Button";
 
 function App() {
-    const [count, setCount] = useState(0);
+
+    const handleClick = () => {
+        console.log('clicked');
+    }
 
     return (
         <>
-            <div>
-                <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+            <h1>Spotify API App</h1>
+            <p><b>The goal:</b> connect to the api, search for songs, see the results, add songs to a list, save that list as a playlist to Spotify account.</p>
+            <p>I'm not concerned about styling this app. I know how to make things look good. The point is to pratice using apis and making a functional app.</p>
+            <hr />
+            <h2>Testing the button</h2>
+            <Button text="Button Test" onClick={handleClick} />
         </>
     );
 }
