@@ -1,7 +1,11 @@
 import React from "react";
 
-const SearchResults = (props: any) => {
-    return <div>SearchResults</div>;
+const SearchResults = (props: {results: string}) => {
+    return (
+        <div>
+            {props.results}
+        </div>
+    );
 };
 
 export default SearchResults;

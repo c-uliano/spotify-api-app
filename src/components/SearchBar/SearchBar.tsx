@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Button from "../Button/Button";
+import SearchResults from "../SearchResults/SearchResults";
 
 const SearchBar = (props: any) => {
     const [searchValue, setSearchValue] = useState('');
@@ -25,8 +26,7 @@ const SearchBar = (props: any) => {
         <>
             <input type="text" onChange={collectValue} value={searchValue} />
             <Button text="Search" onClick={handleSearch} /> <Button text="Reset" onClick={clearSearch} />
-            {/* remove this, just for testing */}
-            <div>{displaySearchValue}</div>
+            <SearchResults results={displaySearchValue} />
         </>
     );
 };
